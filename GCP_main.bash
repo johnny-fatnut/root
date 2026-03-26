@@ -12,3 +12,14 @@ else
 	echo ".env file not found, script execution cannot complete"
 	export ERROR_STATUS=true
 fi
+
+# load environment variables key/value .env file if not found
+if [ $ERROR_STATUS = true ]; then
+  exit
+elif [ $ERROR_STATUS = false ]; then
+  environment.env
+fi
+
+
+
+
